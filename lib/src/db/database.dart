@@ -4,11 +4,13 @@ import 'package:path_provider/path_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:stack_overflow/src/db/dao/todo_dao.dart';
+import 'package:stack_overflow/src/db/schema/user_scheme.dart';
 
 part 'database.g.dart';
 
 @DriftDatabase(
   include: {'schema/todo_schema.drift', 'queries/todo_queries.drift'},
+  tables: [Users],
   daos: [TodosDao],
 )
 class AppDatabase extends _$AppDatabase {
