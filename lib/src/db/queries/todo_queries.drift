@@ -1,0 +1,4 @@
+import 'package:stack_overflow/src/db/schema/todo_schema.drift';
+
+createEntry: INSERT INTO todos (title, content) VALUES (:title, :content);
+allTodos: SELECT * FROM todos;
